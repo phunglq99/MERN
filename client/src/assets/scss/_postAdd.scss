@@ -1,0 +1,22 @@
+.post_add {
+    width: 42px;
+    height: 42px;
+    background-color: blueviolet;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    span {
+        font-size: 18px;
+        color: white;
+        font-weight: 600;
+    }
+}

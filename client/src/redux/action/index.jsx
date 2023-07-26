@@ -1,4 +1,4 @@
-import { createActions } from 'redux-actions';
+import { createActions, createAction } from 'redux-actions';
 
 export const getType = (reduxAction) => {
     return reduxAction().type;
@@ -7,8 +7,11 @@ export const getType = (reduxAction) => {
 export const getPosts = createActions({
     getPostsRequest: undefined,
     getPostSuccess: (payload) => payload,
-    getPostFailure: (err) => err,
+    getPostFailure: (err) => err
 });
+
+export const showModal = createAction('SHOW-MODAL-CREATE-POST');
+export const hideModal = createAction('HIDE-MODAL-CREATE-POST');
 
 /*
     getType(getPosts.getPostSuccess)
