@@ -6,7 +6,7 @@ import Post from './Post';
 const PostList = () => {
     const dispatch = useDispatch();
     const posts = useSelector((state) => state.posts.data);
-    console.log('PostList [post]', posts);
+    // console.log('PostList [post]', posts);
     useEffect(() => {
         dispatch(action.getPosts.getPostsRequest());
     }, [dispatch]);

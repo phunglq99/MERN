@@ -18,6 +18,7 @@ const Post = ({ post }) => {
                     <i className="bi bi-three-dots-vertical"></i>
                 </div>
             </div>
+            <img className="post_image" src={post.attachment} alt="123" />
             <div className="post_item-body">
                 <h3 className="title">{post.title}</h3>
                 <p>{post.content}</p>
