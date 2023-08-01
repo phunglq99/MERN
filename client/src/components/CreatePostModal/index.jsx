@@ -29,8 +29,9 @@ const CreatePostModal = () => {
     };
 
     const handleSubmit = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         dispatch(createPosts.createPostsRequest(data));
+        dispatch(hideModal());
     };
 
     return (

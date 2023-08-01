@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import moment from 'moment';
+import { useDispatch } from 'react-redux';
+import { updatePosts } from '../../../redux/action';
 
 const Post = ({ post }) => {
+    const dispatch = useDispatch();
+
+    const handleLikeCount = useCallback(() => {
+        dispatch(
+            updatePosts.updatePostsRequest({
+                ...post,
+                likeCount: post.likeCount + 1
+            })
+        );
+    }, [dispatch, post]);
+
     return (
         <div className="post_item border p-3">
             <div className="post_item-header">
@@ -24,7 +37,7 @@ const Post = ({ post }) => {
                 <p>{post.content}</p>
             </div>
             <div className="post_item-footer">
-                <div className="icon">
+                <div className="icon" onClick={handleLikeCount}>
                     <i className="bi bi-heart-fill"></i>
                 </div>
                 <span>{post.likeCount} likes</span>

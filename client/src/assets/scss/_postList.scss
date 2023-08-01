@@ -7,6 +7,8 @@
 .post_item {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    flex-direction: column;
 }
 
 .post_item-header {
@@ -62,9 +64,21 @@
 .post_item-footer {
     display: flex;
     align-items: center;
+    margin-top: auto;
 
     .icon {
-        margin-right: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 9999px;
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ccc;
+        }
     }
 }
 
